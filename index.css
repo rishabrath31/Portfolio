@@ -642,66 +642,120 @@ footer {
   font-size: 14px;
 }
 /*CODE FOR RESPONSIVENESS*/
-/* Default styles (for desktop/laptop) */
-/* These will apply to screens 1024px and wider by default */
+/* Existing styles here... */
 
-/* iPad Mini (Portrait) */
-@media only screen and (max-width: 768px) {
-  /* Adjustments for iPad Mini */
-  .nav-bar {
+/* Responsive Design */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .row {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
-  .content {
+  .col {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
     flex-direction: column;
-    text-align: center;
-  }
-
-  .right img {
-    max-width: 80%;
-    margin: 20px 0;
-  }
-
-  .about-content h2 {
-    font-size: 28px;
-  }
-
-  .skills-container {
-    flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 }
 
-/* Samsung Galaxy S8+ (Portrait) */
-@media only screen and (max-width: 360px) {
-  /* Adjustments for Samsung Galaxy S8+ */
-  .nav-bar {
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    padding: 15px;
+  }
+
+  .row {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
-  .content {
+  .col {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
     flex-direction: column;
-    text-align: center;
+    gap: 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    padding: 20px;
   }
 
-  .right img {
-    max-width: 100%;
-    margin: 20px 0;
-  }
-
-  .about-content h2 {
-    font-size: 24px;
-  }
-
-  .skills-container {
-    flex-direction: column;
+  .row {
+    flex-direction: row;
     align-items: center;
   }
 
-  .btn {
-    width: 100%;
-    text-align: center;
+  .col {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    padding: 25px;
+  }
+
+  .row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .col {
+    width: 33.33%;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 25px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    padding: 30px;
+  }
+
+  .row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .col {
+    width: 25%;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 30px;
   }
 }
