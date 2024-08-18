@@ -107,6 +107,7 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow to enhance the effect */
 }
 
+/* CSS CODE FOR THE DROP DOWN  */
 .drop {
   background-color: #36a59d;
   color: white;
@@ -152,11 +153,6 @@ header {
 
 .dropdown:hover .drop {
   background-color: #1b34a0;
-}
-
-.imgvdo {
-  text-align: center;
-  justify-content: center;
 }
 .dropdown {
   display: none;
@@ -719,7 +715,6 @@ footer {
 
   .dropdown {
     display: block;
-    margin-top: 10px;
   }
 }
 
