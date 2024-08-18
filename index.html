@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="updated_index.css" />
     <link rel="stylesheet" href="toggle.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -22,20 +22,40 @@
       <div class="head-section">
         <div class="nav-bar">
           <div class="logo"><span>RISHAB</span>RATH</div>
-          <div class="nav-links">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#about1">About</a></li>
-              <li><a href="#my-skills">Skills</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contactme">Contact</a></li>
-            </ul>
+          <div class="nav-right">
+            <div class="nav-links">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about1">About</a></li>
+                <li><a href="#my-skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contactme">Contact</a></li>
+              </ul>
+            </div>
+            <button id="toggle-dark-mode" class="social-button" size="10px">
+              <i class="fa-regular fa-sun"></i>
+            </button>
+            <!-- Mobile Menu Toggle Button -->
+            <div class="menu-toggle" id="mobile-menu-toggle">
+              <i class="fas fa-bars"></i>
+            </div>
+            <nav id="mobile-menu" class="mobile-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about1">About</a></li>
+                <li><a href="#my-skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contactme">Contact</a></li>
+              </ul>
+            </nav>
+
+            <!-- Overlay for sliding effect -->
+            <div id="menu-overlay"></div>
           </div>
-          <button id="toggle-dark-mode" class="social-button" size="10px">
-            <i class="fa-regular fa-sun"></i>
-          </button>
         </div>
       </div>
+
+      <!-- Mobile Sliding Menu -->
     </header>
 
     <!----------------------------------------------- CONTENT SECTION ------------------------------------------------------>
@@ -482,5 +502,6 @@
       </div>
     </footer>
     <script src="dark-mode-toggle.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
