@@ -107,6 +107,54 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow to enhance the effect */
 }
 
+/* CSS CODE FOR THE DROP DOWN  */
+.drop {
+  background-color: #36a59d;
+  color: white;
+  padding: 4px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(30, 1, 76);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .drop {
+  background-color: #1b34a0;
+}
+
 /* Content Section */
 .content {
   display: flex;
@@ -652,59 +700,6 @@ footer {
 }
 /*CODE FOR RESPONSIVENESS*/
 
-/* Mobile Menu Styles */
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 75%;
-  height: 100%;
-  background-color: #333;
-  color: #fff;
-  transition: left 0.3s ease;
-  z-index: 1001;
-  padding-top: 60px;
-}
-
-.mobile-nav ul {
-  list-style: none;
-  padding-left: 20px;
-}
-
-.mobile-nav ul li {
-  margin-bottom: 20px;
-}
-
-.mobile-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-}
-
-.menu-toggle i {
-  font-size: 1.8em;
-  color: #333;
-}
-
-/* Overlay for Sliding Effect */
-#menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
 /* Media Query for Mobile */
 @media (max-width: 768px) {
   .head-section {
@@ -715,29 +710,13 @@ footer {
     display: none; /* Hide desktop navigation */
   }
 
-  .menu-toggle {
-    display: block; /* Show menu toggle button */
-  }
-
-  /* Show mobile menu when active */
-  .menu-toggle.active ~ .mobile-nav {
-    left: 0;
-  }
-
-  /* Show overlay when menu is active */
-  .menu-toggle.active ~ #menu-overlay {
-    opacity: 1;
-    visibility: visible;
+  .dropdown {
+    display: block;
   }
 }
 
 /* Show desktop navigation on larger screens */
 @media (min-width: 769px) {
-  .mobile-nav,
-  #menu-overlay {
-    display: none;
-  }
-
   .nav-links {
     display: flex; /* Show desktop navigation */
   }
