@@ -8,23 +8,56 @@ html {
   box-sizing: border-box;
 }
 
+:root {
+  --text-color-primary: #333;
+  --text-color-dark: #fff;
+  --background-color-primary: #fff;
+  --background-color-dark: #333;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  /* background-color: #ffffff;
+  color: #333; */
   overflow-x: hidden;
+}
+
+main {
+  background-color: var(--background-color-primary);
+  color: var(--text-color-primary);
+}
+
+.mode-toggle {
+  display: none;
+}
+
+.mode-toggle:checked ~ main {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
 
 /* Header Section */
 header {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  background-color: var(--background-color-primary);
+  color: var(--text-color-primary);
   padding: 16px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
   width: 100vw;
+}
+
+.mode-toggle:checked ~ main header {
+  background-color: #000000;
+  color: var(--text-color-dark) !important;
+}
+.fa-lightbulb {
+  color: #000;
+}
+
+.mode-toggle:checked ~ main .fa-lightbulb {
+  color: var(--text-color-dark);
 }
 
 .head-section {
@@ -62,10 +95,14 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: var(--text-color-primary);
   font-size: 18px;
   transition: color 0.3s;
   position: relative; /* Added for underline effect */
+}
+
+.mode-toggle:checked ~ main header .nav-links a {
+  color: var(--text-color-dark);
 }
 
 .nav-links a::after {
@@ -306,6 +343,10 @@ header {
   margin-bottom: 20px;
 }
 
+.mode-toggle:checked ~ main .about-content h2 {
+  color: var(--text-color-dark);
+}
+
 .about-content p {
   font-size: 18px;
   font-style: oblique;
@@ -468,6 +509,12 @@ header {
 .circular-skill:hover .text {
   opacity: 1;
 }
+
+.mode-toggle:checked ~ main #my-skills {
+  background-color: var(--background-color-dark) !important;
+  color: var(--text-color-dark) !important;
+}
+
 /*----------------------------------------------SERVICE SECTION STYLING------------------------------------------*/
 #services {
   padding: 50px 20px;
@@ -676,6 +723,10 @@ footer {
   color: #fff4f4; /* Adjust color as needed */
   padding: 10px;
   transition: color 0.3s;
+}
+
+.social-button label {
+  cursor: pointer;
 }
 
 .social-button:hover {
